@@ -1,0 +1,9 @@
+scheduler: ["categorical", ["CosineAnnealingLR", "ConstantLR"]]
+optimizer: ["categorical", ["Radam", "AdamW"]]
+arch: ["categorical", ["NestedConvnext2xDS", "NestedConvnext4xDS"]]
+lr: ["loguniform", [0.00001, 0.001]]
+#loss: ["categorical", ["BCEDiceLoss", "BCEWithLogitsLoss"]]
+batch_size: ["categorical", [4,8,16,64]]
+
+#input_size: ["categorical", [[128, 128], [192, 192], [256, 256]]]
+#resize_method: ["categorical", [Resize, RandomCrop, RandomResizedCrop]]
